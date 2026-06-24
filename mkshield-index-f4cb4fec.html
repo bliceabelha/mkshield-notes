@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mk体育 · 资料索引页</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fafafa;
+      color: #1e1e1e;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 4rem;
+    }
+
+    /* 开场短句 — 类似引语 */
+    .opening {
+      font-size: 1.1rem;
+      font-weight: 350;
+      letter-spacing: 0.01em;
+      color: #3a3a3a;
+      border-left: 3px solid #d4a373;
+      padding-left: 1.2rem;
+      margin-bottom: 2.2rem;
+    }
+
+    /* 主标题 — 干净层级 */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 450;
+      letter-spacing: -0.02em;
+      color: #111;
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+    }
+
+    .subhead {
+      font-size: 0.95rem;
+      color: #6b6b6b;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 420;
+      margin-top: 2.8rem;
+      margin-bottom: 0.8rem;
+      color: #1e1e1e;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 400;
+      margin-top: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #2c2c2c;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: #2b2b2b;
+    }
+
+    /* 特点列表 — 卡片式但极简 */
+    .feature-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 1.5rem 0 1.8rem;
+    }
+
+    .feature-item {
+      background: #ffffff;
+      border: 1px solid #eaeaea;
+      border-radius: 12px;
+      padding: 1rem 1.4rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      transition: box-shadow 0.2s;
+    }
+
+    .feature-item:hover {
+      box-shadow: 0 3px 8px rgba(0,0,0,0.03);
+    }
+
+    .feature-item strong {
+      display: inline-block;
+      font-weight: 500;
+      color: #9c6644;
+      margin-right: 0.4rem;
+    }
+
+    .feature-item span {
+      color: #3d3d3d;
+    }
+
+    /* 链接样式 — 融入句子 */
+    a {
+      color: #7f4f24;
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #d4a373;
+      transition: color 0.2s, text-decoration-color 0.2s;
+    }
+
+    a:hover {
+      color: #4a2c14;
+      text-decoration-color: #4a2c14;
+    }
+
+    /* 引用/提示块 */
+    .note-box {
+      background: #f4f1eb;
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      margin: 2rem 0 1.2rem;
+      font-size: 0.95rem;
+      color: #3e3e3e;
+      border-left: 3px solid #b08968;
+    }
+
+    .note-box p {
+      margin-bottom: 0.3rem;
+    }
+
+    /* FAQ 摘要 — 极简折叠感 */
+    .faq-summary {
+      margin: 2rem 0 0.5rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px dashed #ddd;
+      padding: 0.8rem 0;
+    }
+
+    .faq-q {
+      font-weight: 450;
+      color: #1f1f1f;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-a {
+      color: #555;
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #eaeaea;
+      margin: 2.5rem 0 1.5rem;
+    }
+
+    .footer-note {
+      font-size: 0.85rem;
+      color: #8a8a8a;
+      margin-top: 3rem;
+      text-align: left;
+      letter-spacing: 0.01em;
+    }
+
+    /* 响应式 */
+    @media (max-width: 500px) {
+      .page-wrapper {
+        padding: 2rem 1.2rem 3rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      .opening {
+        font-size: 1rem;
+        padding-left: 1rem;
+      }
+      .feature-item {
+        padding: 0.8rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- 开场短句 -->
+  <div class="opening">
+    从零散的赛事记录到清晰的检索结构，有时只差一个经过整理的索引。
+  </div>
+
+  <h1>mk体育 · 信息整理说明</h1>
+  <div class="subhead">围绕赛事资料、队伍数据与常规浏览需求所做的条目式归档</div>
+
+  <!-- 承接段落 -->
+  <p>
+    日常接触体育信息时，常见的情况是来源分散、更新节奏不一，查找特定内容往往需要多次跳转。
+    这份索引围绕 <a href="https://mkshield.com.cn">mk体育</a> 所覆盖的领域，尝试将常见的关注点按类别汇集，减少重复检索的时间。
+    以下所列条目均来自公开可查的信息渠道，并经过基础核实，可作为进一步了解的起点。
+  </p>
+
+  <h2>当前索引涵盖的特点</h2>
+
+  <!-- 特点列表 -->
+  <div class="feature-grid">
+    <div class="feature-item">
+      <strong>· 按赛事归类</strong>
+      <span>将相近时间、同赛区的比赛记录放在一组，便于横向对比赛程与结果。</span>
+    </div>
+    <div class="feature-item">
+      <strong>· 队伍与选手条目</strong>
+      <span>列出常被问及的阵容变动、赛季数据，并附上可追溯的原始来源链接。</span>
+    </div>
+    <div class="feature-item">
+      <strong>· 资讯摘要</strong>
+      <span>每周整理重点新闻与转会动态，以短句形式呈现，保留原文出处。</span>
+    </div>
+    <div class="feature-item">
+      <strong>· 术语对照表</strong>
+      <span>针对常用技术统计缩写、裁判手势、战术命名提供简要说明，减少理解门槛。</span>
+    </div>
+  </div>
+
+  <!-- 场景 / 使用示例 -->
+  <h2>索引的可能用途</h2>
+  <p>
+    如果你在回顾某个赛季的关键场次，或者需要快速查找某支队伍近五场的首发名单，这里的归档方式尝试给出一个相对直接的路径。
+    每一条条目都尽量保持内容中立，只做整理与标注，不做主观分析。
+    对于深度战术讨论或实时比分，仍建议以官方转播或数据平台为准。
+  </p>
+
+  <!-- 提示块 -->
+  <div class="note-box">
+    <p>📋 提示：每次更新后，该索引会在页面顶部注明最近一次修订日期。信息引用截止于各数据源公开版本，如有疏漏欢迎通过站点反馈渠道指正。</p>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-summary">
+    <h2>常见问题摘要</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Q：索引中的赛事数据更新频率如何？</div>
+      <div class="faq-a">A：主流联赛（如中超、英超、CBA）通常在比赛日结束后48小时内完成基础数据整理；次级联赛或杯赛视信息可获取程度而定，一般不超过一周。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q：能否直接使用索引里的数据做二次发布？</div>
+      <div class="faq-a">A：建议先核对原始版权声明，本索引仅提供整理后的路径指引，不替代源数据的授权条款。引用时标明出处即可。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Q：是否包含历史档案（如十年前的数据）？</div>
+      <div class="faq-a">A：目前以近三个赛季为主，历史档案正在逐项补充，优先收录决赛、升级附加赛等关键场次。</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <p style="font-size: 0.95rem; color: #4a4a4a;">
+    如果你恰好也在整理类似的资料，或者想了解某个特定赛区的结构，
+    可以留意 <a href="https://mkshield.com.cn">mk体育</a> 的索引更新。
+    每次扩充都会尽量保持条目间的统一格式，以便直接引用或交叉查阅。
+  </p>
+
+  <!-- 温和结尾 -->
+  <div class="footer-note">
+    — 索引维护者 · 仅作信息归档，不构成任何投资或参与建议。
+  </div>
+
+</div>
+</body>
+</html>
