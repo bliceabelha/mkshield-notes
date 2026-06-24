@@ -1,2 +1,40 @@
 # mkshield-notes
-HTML page archive and documentation
+
+## 简介
+
+`mkshield-notes` 是一个用于归档和发布多个独立 HTML 页面的仓库。本仓库不针对任何特定网站或域名，而是作为一系列静态页面的集合，方便查阅、共享与版本管理。
+
+## 目录说明
+
+```
+mkshield-notes/
+├── README.md        # 本文件
+├── pages/           # 存放所有 HTML 页面
+│   ├── example1.html
+│   ├── example2.html
+│   └── ...
+└── assets/          # 页面所需的资源文件（可选）
+    ├── css/
+    ├── js/
+    └── images/
+```
+
+- **pages/**：核心目录，所有独立 HTML 页面均存放于此。
+- **assets/**：可选目录，用于存放页面依赖的样式、脚本或图片等资源。
+
+## 页面归档说明
+
+- 每个 HTML 页面均为独立文件，无外部依赖（除非在 `assets/` 中提供）。
+- 页面内容涵盖技术笔记、实用工具、学习记录等，不涉及商业或推广性质的内容。
+- 页面命名应尽量反映内容主题，建议使用英文小写、连字符分隔的格式（如 `note-about-something.html`）。
+
+## 维护说明
+
+- 欢迎通过 Issue 或 Pull Request 提交建议或修正。
+- 新增页面请放入 `pages/` 目录，并确保所有引用资源均位于 `assets/` 中。
+- 请勿在页面中包含任何形式的营销信息、诱导点击或外部链接。
+- 本仓库仅用于静态内容存档，不提供动态服务或用户数据收集。
+
+## 许可
+
+本仓库内容采用 [MIT License](LICENSE) 发布，详情请参阅仓库中的 LICENSE 文件。
