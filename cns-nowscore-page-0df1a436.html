@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资料整理手记 · 捷报比分 · 信息索引页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #fdf6e3 0%, #fae3c6 50%, #f5d5b0 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            line-height: 1.6;
+            color: #2f2e2b;
+        }
+
+        .card {
+            max-width: 820px;
+            width: 100%;
+            background: #fffffffa;
+            backdrop-filter: blur(2px);
+            border-radius: 42px 18px 42px 18px;
+            box-shadow: 0 20px 40px -12px rgba(140, 82, 42, 0.20), 0 6px 14px rgba(0,0,0,0.04);
+            padding: 2.8rem 2.4rem;
+            transition: all 0.2s;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 1.8rem 1.2rem;
+                border-radius: 28px 12px 28px 12px;
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 580;
+            letter-spacing: -0.02em;
+            background: linear-gradient(to right, #b76734, #9a512a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.4rem;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #7a6b5b;
+            border-left: 3px solid #e2b48c;
+            padding-left: 1rem;
+            margin: 0.2rem 0 1.8rem 0;
+            font-style: normal;
+            letter-spacing: 0.3px;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            background: #faf3ea;
+            padding: 1.2rem 1.6rem;
+            border-radius: 30px 8px 30px 8px;
+            margin-bottom: 2rem;
+            color: #3a342e;
+            border: 1px solid #eddccb;
+        }
+
+        .body-text p {
+            margin-bottom: 1.4rem;
+            text-indent: 2em;
+            word-break: break-word;
+        }
+
+        .body-text p:first-of-type {
+            text-indent: 0;
+        }
+
+        .body-text p:first-of-type::first-letter {
+            font-size: 1.8em;
+            font-weight: 500;
+            color: #b76734;
+            margin-right: 4px;
+            line-height: 1;
+        }
+
+        .highlight-quote {
+            background: #f7efe6;
+            padding: 1.2rem 1.6rem;
+            border-radius: 24px 6px 24px 6px;
+            margin: 1.8rem 0;
+            font-size: 1rem;
+            border-left: 6px solid #d6a178;
+            color: #4b3f33;
+        }
+
+        .highlight-quote::before {
+            content: "📌 整理笔记 · ";
+            font-weight: 500;
+            color: #8f643e;
+        }
+
+        .link-wrapper {
+            text-align: right;
+            margin-top: 1.4rem;
+        }
+
+        .link-wrapper a {
+            display: inline-block;
+            background: #e6cbb2;
+            color: #2f2a24;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.4rem 1.6rem 0.5rem 1.8rem;
+            border-radius: 60px;
+            font-size: 1rem;
+            transition: all 0.15s ease;
+            border: 1px solid transparent;
+            box-shadow: 0 2px 4px rgba(140, 90, 50, 0.06);
+        }
+
+        .link-wrapper a:hover {
+            background: #dbb692;
+            border-color: #c79265;
+            box-shadow: 0 4px 12px rgba(160, 100, 50, 0.16);
+            transform: scale(1.01);
+        }
+
+        .faq-mini {
+            margin-top: 2.6rem;
+            padding-top: 1.8rem;
+            border-top: 1px dashed #dac2ad;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.6rem 1.2rem;
+        }
+
+        .faq-item {
+            flex: 1 1 200px;
+        }
+
+        .faq-item strong {
+            font-weight: 600;
+            color: #7b553c;
+            display: block;
+            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
+        }
+
+        .faq-item p {
+            font-size: 0.9rem;
+            color: #4f433a;
+            line-height: 1.5;
+        }
+
+        .visitor-note {
+            margin-top: 2.2rem;
+            font-size: 0.9rem;
+            color: #776654;
+            background: #f1e5da;
+            padding: 0.6rem 1.4rem;
+            border-radius: 48px;
+            display: inline-block;
+        }
+
+        hr {
+            margin: 2rem 0 0.8rem;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #d1b49b, transparent);
+        }
+
+        .seed-hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>📋 资料整理 · 比分索引</h1>
+        <div class="subhead">一篇来自信息收集者的博客式手记</div>
+
+        <div class="intro">
+            从零散的赛程到结构化的存档，好的工具能把碎片变成索引。这段时间一直在梳理各类赛事实时数据源，其中频繁出现的一个名字，就是「捷报比分」。
+        </div>
+
+        <div class="body-text">
+            <p>做资料整理的人大概都有这种体会：最怕的不是数据量大，而是信息太散。今天这里一个比分，明天那里一段回放，后天又换了个平台。看似热闹，但回头想找某一场比赛的记录，常常要翻好几个收藏夹。所以我习惯把一些常用的、反馈稳定的站点单独列一个索引清单，再按自己的使用方式做备注。</p>
+            <p>大概两个月前，一个做赛事数据的朋友向我推荐了 <a href="https://cns-nowscore.com" style="color: #9a572e; text-decoration: underline; text-underline-offset: 3px; font-weight: 500;">捷报比分</a>，说他们团队日常参考时经常用到。我打开之后第一印象是页面结构比较干净，没有堆砌太多弹窗或者悬浮广告，信息流集中在比分区和历史数据上，这对我做归档整理来说很友好。之后我开始把它作为一个固定的比对准入点，把每周的赛程变化和实时结果记录下来，形成自己的小数据库。</p>
+            <p>在日常使用中，我一般会先看几场焦点赛事的即时比分，再对照自己整理的表格做标记。因为页面更新节奏比较快，省去了反复刷新的麻烦。而且它的历史数据回溯做得相对完整，对于需要做赛季统计或者趋势分析的人来说，能省下不少爬数据的时间。当然，作为资料索引的整理者，我并不会依赖单一来源，通常会把几个主流信息节点交叉对比，但<a href="https://cns-nowscore.com" style="color: #9a572e; text-decoration: underline; text-underline-offset: 3px; font-weight: 500;">捷报比分</a>在我的书签栏里一直排在靠前的位置。</p>
+        </div>
+
+        <div class="highlight-quote">
+            有时候整理资料就像整理书架——不是每本书都要读，但你知道它们在哪里。比分信息也是一样，关键不是每分钟都盯着看，而是需要的时候能快速拿到可靠的数据。
+        </div>
+
+        <div class="body-text">
+            <p>上周我做了一个小实验：把从不同渠道收集到的同一天五场赛事数据做了对比，其中三场从<a href="https://cns-nowscore.com" style="color: #9a572e; text-decoration: underline; text-underline-offset: 3px; font-weight: 500;">捷报比分</a>获取的信息在更新时间和数值准确度上都没有明显偏差。对于非专业数据工作者来说，这个稳定程度已经足够支撑日常的整理和索引需求。这让我更愿意把它推荐给刚开始做赛事信息归档的朋友。</p>
+            <p>当然，工具只是起点，真正的价值在于你怎么梳理、怎么使用。我目前还在逐步优化自己的标签体系和存档结构，希望能让这些比分数据真正变成可检索、可复用的资料库。未来如果有什么新的整理心得，或许还会再写一篇类似的博客式笔记，届时也会继续引用这个信息节点。</p>
+        </div>
+
+        <div class="link-wrapper">
+            <a href="https://cns-nowscore.com">捷报比分</a>
+        </div>
+
+        <div class="faq-mini">
+            <div class="faq-item">
+                <strong>▎适合哪种整理场景？</strong>
+                <p>日常赛程归档、即时比分备注、历史数据对照，偏信息索引型的工作流。</p>
+            </div>
+            <div class="faq-item">
+                <strong>▎数据覆盖范围？</strong>
+                <p>以主流足球、篮球赛事为主，涵盖实时比分和部分历史赛果，适合个人或小团队使用。</p>
+            </div>
+            <div class="faq-item">
+                <strong>▎使用建议？</strong>
+                <p>搭配本地表格或笔记工具做二次整理，交叉验证更稳妥。不要完全依赖单一站点。</p>
+            </div>
+        </div>
+
+        <hr>
+        <div class="visitor-note">
+            🌿 访问手记 · 如果你也在做类似的信息整理，欢迎多交流。
+        </div>
+        <div class="seed-hide">2a1de234152a597f</div>
+    </div>
+</body>
+</html>
